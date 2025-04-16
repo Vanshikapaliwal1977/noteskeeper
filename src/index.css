@@ -99,3 +99,37 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .note-card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden transition-all duration-200 hover:shadow-lg border border-gray-100;
+  }
+  
+  .note-card-code {
+    @apply bg-note-code;
+  }
+  
+  .note-card-image {
+    @apply bg-white;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
